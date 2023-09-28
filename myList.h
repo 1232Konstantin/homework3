@@ -79,11 +79,12 @@ struct MyIterator
     bool operator!=(const MyIterator& other){return (node==other.node)? false : true;}
     MyIterator operator+(size_t i){
         MyIterator temp=*this;
-        for (size_t j=0; j<i; j++) temp.operator++(); return temp;}
+        for (size_t j=0; j<i; j++) {temp.operator++(); return temp;}
+    }
     MyIterator operator-(size_t i){
         MyIterator temp=*this;
-        for (size_t j=0; j<i; j++) temp.operator--(); return temp;}
-
+        for (size_t j=0; j<i; j++) {temp.operator--(); return temp;}
+    }
     bool isValid(){return (node)? true : false; }
     T& operator*(){ if (node) return node->val; else throw std::out_of_range("bad iteration");}
 
