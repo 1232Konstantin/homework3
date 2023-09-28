@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "xmemory": "cpp",
+        "xstring": "c",
+        "xtree": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}
