@@ -26,17 +26,17 @@ struct My_allocator {
         current_size=other.current_size;
     }
 
-    template< class Other>
-    My_allocator (My_allocator<Other>& other) noexcept
-    {
-        if (sizeof (Other)==sizeof (T))
-        {
-                memory_bank=std::reinterpret_pointer_cast<T,Other>(other.memory_bank);
-                next_free=other.next_free;
-                current_size=other.current_size;
-        }
+    // template< class Other>
+    // My_allocator (My_allocator<Other>& other) noexcept
+    // {
+    //     if (sizeof (Other)==sizeof (T))
+    //     {
+    //             memory_bank=std::reinterpret_pointer_cast<T,Other>(other.memory_bank);
+    //             next_free=other.next_free;
+    //             current_size=other.current_size;
+    //     }
 
-    }
+    // }
 
     My_allocator (My_allocator<T>&& other) noexcept
     {
